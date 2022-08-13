@@ -1,0 +1,33 @@
+.App {
+  font-family: "Poppins";
+  
+}
+
+.App-container {
+  width: 80%;
+  margin-bottom: 3rem;
+  margin: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.topnav a{
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: .3s ease-in-out;
+}
+
+.topnav a:hover{
+  color: #df253a;
+  border-bottom: 5px solid #df253a;
+  transition: .3s ease-in-out;
+}
