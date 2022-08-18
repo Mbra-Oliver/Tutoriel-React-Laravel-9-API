@@ -1,11 +1,12 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Loader from "../../shared/components/Loader";
 import "./film.css";
 
 export default function Film() {
-
+  
 
   let navigate = useNavigate();
 

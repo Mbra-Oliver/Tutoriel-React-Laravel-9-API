@@ -1,24 +1,22 @@
 import "./App.css";
-import Film from "./pages/films/Film";
-import { Routes, Route, Link } from "react-router-dom";
-import Serie from "./pages/series/Serie";
-import Details from "./pages/films/Details";
+import { useState } from "react";
+import { authContext } from "./helpers/authContext";
+
+import Navbar from "./pages/navigations/Navbar";
 
 function App() {
+
+  const [logged, setLogged] = useState(false);
+  const [user, setUser] = useState();
+
   return (
-    <div className="App">
-      <div className="App-container">
-        <div className="topnav">
-          <Link to="/">Accueil</Link>
-          <Link to="/series">Serie</Link>
+    <authContext.Provider value={{ logged, setLogged, user, setUser }} >
+      <div className="App">
+        <div className="App-container">
+         <Navbar />
         </div>
-        <Routes>
-          <Route path="/" exact element={<Film />} />
-          <Route path="/films/:id" element={<Details />} />
-          <Route path="/series" element={<Serie />} />
-        </Routes>
       </div>
-    </div>
+    </authContext.Provider>
   );
 }
 
